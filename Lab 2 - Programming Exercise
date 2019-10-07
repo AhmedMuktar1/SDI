@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 struct timeType 
 {
     int hr;
@@ -10,4 +14,35 @@ struct tourType
     string cityName;
     int distance;
     timeType travleTime;
+};
+
+void TheFunctionName(tourType);
+
+int main()
+{
+    
+    tourType destination;
+    
+    cout << "Enter destination" << endl;
+    cin >> destination.cityName;
+    cout << "Enter distance to destination" << endl;
+    cin >> destination.distance;
+    cout << "Enter time in takes to get to destination" << endl;
+    cout << "Hours: ";
+    cin >> destination.travleTime.hr;
+    cout << "Mins: ";
+    cin >> destination.travleTime.min;
+    cout << "Seconds: ";
+    cin >> destination.travleTime.sec;
+    
+    
+    TheFunctionName(destination);
+
+}
+
+void TheFunctionName(tourType destination)
+{
+    cout << destination.cityName << endl;
+    cout << destination.distance << endl;
+    cout << destination.travleTime.hr <<" Hours " << destination.travleTime.min << " mins and " <<destination.travleTime.sec << " Seconds "<<endl;
 };
