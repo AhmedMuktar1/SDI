@@ -1,0 +1,13 @@
+struct timeType 
+{
+    int hr;
+    double min;
+    int sec;
+};
+
+struct tourType
+{
+    string cityName;
+    int distance;
+    timeType travleTime;
+};
